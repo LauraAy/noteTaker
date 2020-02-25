@@ -1,3 +1,13 @@
+const express = require('express')
+const path = require('path')
+const fs = require('fs')
+const app = express()
+
+app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.urlencoded({ extended: true }))
+app.use(express.json())
+
+
 var $noteTitle = $(".note-title");
 var $noteText = $(".note-textarea");
 var $saveNoteBtn = $(".save-note");
