@@ -22,6 +22,7 @@ var getNotes = function() {
   return $.ajax({
     url: "/api/notes",
     method: "GET"
+    })
   });
 };
 
